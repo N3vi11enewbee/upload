@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 # Set your OpenAI API key
-openai.api_key = ""
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 @app.post("/process")
 async def process_data_and_question(
